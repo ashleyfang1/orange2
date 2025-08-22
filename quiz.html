@@ -8,27 +8,59 @@
 <body>
     <form id="quizForm">
         <div class="question">
-            question 1<br>
-            <label><input type="radio" name="q1" value="A"> ans a</label>
-            <label><input type="radio" name="q1" value="B"> ans b</label>
-            <label><input type="radio" name="q1" value="C"> ans c</label>
-            <label><input type="radio" name="q1" value="D"> ans d</label>
+            When working in a team, I usually:<br>
+            <label><input type="radio" name="q1" value="A">Take control, assign roles, and make sure we move forward</label><br>
+            <label><input type="radio" name="q1" value="B">Keep everyone’s spirits high with energy and humor</label><br>
+            <label><input type="radio" name="q1" value="C">Stay supportive and make sure everyone feels included</label><br>
+            <label><input type="radio" name="q1" value="D">Focus on details and push for a high-quality outcome</label><br>
           </div>
 
-          <div class="question">
-            question 2<br>
-            <label><input type="radio" name="q2" value="A"> ans a</label>
-            <label><input type="radio" name="q2" value="B"> ans b</label>
-            <label><input type="radio" name="q2" value="C"> ans c</label>
-            <label><input type="radio" name="q2" value="D"> ans d</label>
+        <div class="question">
+            When faced with a big decision, I:<br>
+            <label><input type="radio" name="q2" value="A">Decide quickly and confidently</label><br>
+            <label><input type="radio" name="q2" value="B">Go with what feels fun or exciting</label><br>
+            <label><input type="radio" name="q2" value="C">Take my time, weighing options carefully</label><br>
+            <label><input type="radio" name="q2" value="D">Analyze everything in detail before choosing</label><br>
           </div>
 
-          <div class="question">
-            question 3<br>
-            <label><input type="radio" name="q3" value="A"> ans a</label>
-            <label><input type="radio" name="q3" value="B"> ans b</label>
-            <label><input type="radio" name="q3" value="C"> ans c</label>
-            <label><input type="radio" name="q3" value="D"> ans d</label>
+        <div class="question">
+            If things don’t go as planned, I:<br>
+            <label><input type="radio" name="q3" value="A">Create a new plan immediately</label><br>
+            <label><input type="radio" name="q3" value="B">Laugh it off and move on</label><br>
+            <label><input type="radio" name="q3" value="C">Stay calm and adjust slowly</label><br>
+            <label><input type="radio" name="q3" value="D">Get frustrated and try to fix every mistake</label><br>
+          </div>
+
+        <div class="question">
+            In an argument, I’m most likely to:<br>
+            <label><input type="radio" name="q4" value="A">Dominate and push my point strongly</label><br>
+            <label><input type="radio" name="q4" value="B">Use humor or charm to smooth things over</label><br>
+            <label><input type="radio" name="q4" value="C">Avoid confrontation and keep the peace</label><br>
+            <label><input type="radio" name="q4" value="D">Withdraw, reflect, and bring evidence for my side</label><br>
+          </div>
+
+        <div class="question">
+            At a party, you’d find me:<br>
+            <label><input type="radio" name="q5" value="A">Organizing a group activity</label><br>
+            <label><input type="radio" name="q5" value="B">Telling stories, meeting everyone</label><br>
+            <label><input type="radio" name="q5" value="C">Relaxing with a few close friends</label><br>
+            <label><input type="radio" name="q5" value="D">Observing until I feel comfortable</label><br>
+          </div>
+
+        <div class="question">
+            People would describe me as:<br>
+            <label><input type="radio" name="q6" value="A">Driven, confident, ambitious</label><br>
+            <label><input type="radio" name="q6" value="B">Fun, lively, outgoing</label><br>
+            <label><input type="radio" name="q6" value="C">Easygoing, calm, friendly</label><br>
+            <label><input type="radio" name="q6" value="D">Thoughtful, careful, serious</label><br>
+          </div>
+
+        <div class="question">
+            What motivates me most is:<br>
+            <label><input type="radio" name="q7" value="A">Achieving success and winning</label><br>
+            <label><input type="radio" name="q7" value="B">Enjoying life and experiences</label><br>
+            <label><input type="radio" name="q7" value="C">Stability, comfort, and good relationships</label><br>
+            <label><input type="radio" name="q7" value="D">Knowledge, self-improvement, and perfection</label><br>
           </div>
 
           <button type="button" onclick="getResult()">result</button>
@@ -53,13 +85,13 @@
 
             let resultText = "";
                 if (result === "A") {
-                    resultText = "most a";
+                    resultText = "brown";
                 } else if (result === "B") {
-                    resultText = "most b";
+                    resultText = "orange";
                 } else if (result === "C") {
-                    resultText = "most c";
+                    resultText = "white";
                 } else if (result === "D") {
-                    resultText = "most d";
+                    resultText = "black";
                 }
 
             document.getElementById("quizForm").style.display = "none";
