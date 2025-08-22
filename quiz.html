@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <form id="quizForm">
+        <div class="question">
+            question 1<br>
+            <label><input type="radio" name="q1" value="A"> ans a</label>
+            <label><input type="radio" name="q1" value="B"> ans b</label>
+            <label><input type="radio" name="q1" value="C"> ans c</label>
+            <label><input type="radio" name="q1" value="D"> ans d</label>
+          </div>
+
+          <div class="question">
+            question 2<br>
+            <label><input type="radio" name="q2" value="A"> ans a</label>
+            <label><input type="radio" name="q2" value="B"> ans b</label>
+            <label><input type="radio" name="q2" value="C"> ans c</label>
+            <label><input type="radio" name="q2" value="D"> ans d</label>
+          </div>
+
+          <div class="question">
+            question 3<br>
+            <label><input type="radio" name="q3" value="A"> ans a</label>
+            <label><input type="radio" name="q3" value="B"> ans b</label>
+            <label><input type="radio" name="q3" value="C"> ans c</label>
+            <label><input type="radio" name="q3" value="D"> ans d</label>
+          </div>
+
+          <button type="button" onclick="getResult()">result</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function getResult(){
+            let answers = document.querySelectorAll('input[type="radio"]:checked')
+            let scores = { A:0, B:0, C:0, D:0 };
+            answers.forEach((ans) => {
+            scores[ans.value]++})
+
+            let personality = "";
+            let maxScore=0
+            for (let letter in scores) {
+                if (scores[letter] > maxScore) {
+                    maxScore = scores[letter];
+                    result = letter;
+            }}
+
+            let resultText = "";
+                if (result === "A") {
+                    resultText = "most a";
+                } else if (result === "B") {
+                    resultText = "most b";
+                } else if (result === "C") {
+                    resultText = "most c";
+                } else if (result === "D") {
+                    resultText = "most d";
+                }
+
+            document.getElementById("quizForm").style.display = "none";
+            let resultDiv = document.getElementById("result");
+            resultDiv.style.display = "block";
+            resultDiv.innerText = resultText;
+        }
+    </script>
+</body>
+</html>
